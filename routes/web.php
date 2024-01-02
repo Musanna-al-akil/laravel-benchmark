@@ -36,6 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get('/benchmark',[BenchmarkController::class,'benchmark'])->name('benchmark');
+Route::get('/benchmark/query-20',[BenchmarkController::class,'benchmarkQuery20'])->name('benchmark/query20');
+Route::get('/benchmark/query-1',[BenchmarkController::class,'benchmarkQuery1'])->name('benchmark/query1');
+Route::get('/benchmark/postData',[BenchmarkController::class,'benchmarkPostData'])->name('benchmark/postData');
 
 require __DIR__.'/auth.php';
