@@ -13,7 +13,14 @@ class BenchmarkController extends Controller
     }
 
     public function benchmarkQuery1(){
-        
+        $Data = Benchmark::where('first_name', 'random')->first();
+        return Inertia::render('Benchmark/Query1', ['data'=>[
+            'name'=>$Data['name'],
+            'first_name'=>$Data['first_name'],
+            'last_name'=>$Data['last_name'],
+            'age'=>$Data['age'],
+            'json'=>$Data['json_data'],
+        ]]);
     }
     public function benchmarkPostData(){
         $post = new Benchmark;
