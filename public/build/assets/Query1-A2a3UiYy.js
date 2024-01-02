@@ -1,0 +1,1 @@
+import{j as e,a as r}from"./app-_p2ZrnFy.js";function h({data:s}){return e.jsxs(e.Fragment,{children:[e.jsx(r,{title:"Dashboard"}),e.jsx("h1",{children:"hello"}),e.jsx("h1",{children:s.name}),e.jsx("h1",{children:s.first_name}),e.jsx("h1",{children:s.last_name}),e.jsx("h1",{children:s.age}),e.jsx("h1",{children:JSON.parse(s.json)[0]})]})}export{h as default};
